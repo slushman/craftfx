@@ -1,0 +1,65 @@
+// Some common variables and mixins to get you started.
+// Variables allow you to re-use colors, sizes, and other values without repeating
+// yourself. This means that changes that should be small, such as tweaking the
+// coloring or the sizing, can be done in one place, not all over the stylesheet.
+
+$base-font: sans-serif;
+$header-font: $base-font; // you can refer to other variables
+
+/* Sizes */
+$fontsize: 16px;
+$lineheight: 24px;
+$menuheight: 59px;
+$socials: 30px;
+$tgu_size: 3em;
+
+/* Supported Values for $layout:
+  null | content-sidebar | content-sidebar-sidebar | sidebar-content | sidebar-content-sidebar | sidebar-sidebar-content
+*/
+$layout: null !default;
+$vspacing: 1.5em;
+
+/* Typography */
+$h1: 3rem;
+$h2: 2.25rem;
+$h3: 1.5rem;
+$h4: 1.25rem;
+$h5: 1.1rem;
+$h6: 1rem;
+$h7: 0.85rem;
+
+/* Breakpoints */
+$responsive1: 600px;
+$responsive15: 700px;
+$responsive175: 750px;
+$responsive2: 840px;
+$responsive3: 965px;
+$responsive4: 1065px;
+$responsive5: 1200px;
+$responsive6: 1500px;
+$responsive7: 1850px;
+
+/* Colors */
+$accent: red;
+$darkgray: #272627;
+$medgray: #24272f;
+$lightgray: #a9a8a9;
+$medred: #e32b28;
+$darkred: #cd3f35;
+$light: #ffffff;
+$darkteal: #475761;
+
+/* Backgrounds */
+$site-bg: "images/bright_squares.png";
+$site-retina-bg: "images/bright_squares_@2X.png";
+$header-bg-wide: "images/header-bg-wide.png";
+$header-bg: "images/header-bg.png";
+$small-header-bg: "images/small-header-bg.png";
+$logo-bg: "images/craft-logo.png";
+$desc-bg: "images/site-description.png";
+$headshot: "images/headshot.png";
+$footer-bg: "images/footer-bg.png";
+$footer-bg-wide: "images/footer-bg-wide.png";
+$menu-bg: "images/menu-bg.png";
+$menu-bg-wide: "images/menu-bg-wide.png";
+$tgu: "images/TGU_white_logo.png";

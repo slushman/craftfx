@@ -1,0 +1,67 @@
+.nav-social {
+
+	.screen-reader-text {
+		position: absolute;
+		top:      -9999em;
+		left:     -9999em;
+	}
+
+	.menu-items {
+		list-style: none;
+
+		.menu-item {
+			display:  inline-block;
+			position: relative;
+			margin: 0 0.25em;
+			line-height: $menuheight;
+
+			a {
+			    color: transparent;
+			    text-decoration: none;
+			    font-size: 0;
+			}
+
+			a:before {
+				font-size: $socials;
+			}
+
+			a[href*="facebook.com"]:before {
+				@include icon($facebook-sign);
+			}
+			a[href*="twitter.com"]:before {
+				@include icon($twitter);
+			}
+			a[href*="plus.google.com"]:before {
+				@include icon($google-plus-sign);
+			}
+			a[href*="pinterest.com"]:before {
+				@include icon($pinterest-sign);
+			}
+			a[href*="tumblr.com"]:before {
+				@include icon($tumblr-sign);
+			}
+			a[href*="youtube.com"]:before {
+				@include icon($youtube-sign);
+			}
+			a[href*="flickr.com"]:before {
+				@include icon($flickr);
+			}
+			a[href*="instagram.com"]:before {
+				@include icon($instagram);
+			}
+			a[href*="linkedin.com"]:before {
+				@include icon($linkedin-sign);
+			}
+			a[href*="movie"]:before,
+			a[href*="film"]:before {
+				@include icon($film);
+			}
+			a[href$=".rss"]:before, 
+			a[href$="rss.xml"]:before, 
+			a[href*="/feed/"]:before,
+			a[href*="/rss/"]:before {
+				@include icon($rss);
+			}
+		}
+	}
+}

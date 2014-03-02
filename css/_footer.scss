@@ -1,0 +1,107 @@
+// Footer
+// --------------------------
+
+.site-footer {
+	background-color: $medred;
+	color: $light;
+
+	div {
+		//border: 1px solid red !important;
+	}
+
+	@media all and (min-width: $responsive2) {
+		background-color: transparent;
+		@include imagebg ( $footer-bg, "", no-repeat, top, center, cover );
+		max-height: 74px;
+		line-height: 74px;
+		overflow: hidden;
+	}
+
+	@media only screen and (min-width: $responsive5) {
+		@include imagebg ( $footer-bg-wide, "", no-repeat, center, center, cover );
+	}
+
+	a {
+		color: $light;
+	}
+
+	.footer-wrap {
+		max-width: 75em;
+		margin: auto;
+		padding: 0 4em;
+
+		.footer_left {
+
+			@include footerboxes;
+
+			@media all and (min-width: $responsive2) {
+				float: left;
+			}
+
+			.nav-social {
+				text-align: center;
+		
+				.menu-items {
+					margin: 0;
+
+					.menu-item {
+
+						a:before {
+							color: $light;
+						}
+
+					}
+
+				}
+			}
+		}
+
+		.site-info {
+			margin: auto;
+			text-align: center;
+
+			@include footerboxes;
+
+			@media all and (min-width: $responsive2) {
+
+			}
+
+		}
+
+		.site-credits {
+			text-align: center;
+			line-height: 2em;
+			max-width: 11em;
+			margin: 0 auto;
+			
+			@include footerboxes;
+
+			@media all and (min-width: $responsive2) {
+				float: right;
+				line-height: inherit;
+			}
+
+			.slushman {
+				float: left;
+				line-height: 2em;
+
+				@media all and (min-width: $responsive2) {
+					line-height: inherit;
+					margin-right: 0.75em;
+				}
+			}
+
+			.tinygrayumbrella {
+				width: $tgu_size;
+				height: $tgu_size;
+				float: right;
+				@include imagebg ( $tgu, "", no-repeat, right, center, $tgu_size $tgu_size );
+
+				@media all and (min-width: $responsive2) {
+					margin-top: 0.75em;
+				}
+
+			}
+		}
+	}
+}

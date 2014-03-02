@@ -1,0 +1,113 @@
+/* =Media
+----------------------------------------------- */
+
+.page-content,
+.entry-content,
+.comment-content {
+	img.wp-smiley {
+		border: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+	}
+}
+
+.wp-caption {
+	border: 2px solid $darkgray;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	background-color: $darkteal;
+	
+	img[class*="wp-image-"] {
+		display: block;
+		margin: 1.2% auto 0;
+		max-width: 98%;
+	}
+
+	.wp-caption-text {
+		text-align: center;
+		margin: 0.8075em 0 !important;
+		color: $light;
+
+		a {
+			color: $light;
+		}
+	}
+}
+
+// Galleries
+.gallery {
+	margin-bottom: $vspacing;
+
+	@include clearfix();
+
+	.gallery-item {
+		float: left;
+		margin-bottom: $vspacing;
+
+		.gallery-icon {
+			a { 
+				display: block; 
+				text-align: center;
+			}
+
+			img {
+				border: 2px solid $lightgray;
+				height: auto;
+				margin-bottom: 0;
+			}
+		}
+
+		.gallery-caption {
+			margin: 0;
+			text-align: center;
+		}
+
+	}
+
+} 
+
+.home .gallery,
+.blog .gallery {
+	@include hide();
+}
+
+/* Fluid Gallery Columns
+   works well if you remove the default gallery styling
+   by adding the following to your functions.php
+   add_filter( 'use_default_gallery_style', '__return_false' );
+*/
+
+@for $i from 2 through 9 {
+	.gallery-columns-#{$i} .gallery-item {
+		@include column( $i );
+	}
+}
+
+.single .powerpress_player {
+	float: right;
+
+	.mejs-container {
+		width: 440px;
+	}
+
+
+}
+
+.single .powerpress_links {
+	text-align: right;
+}
+
+.home .powerpress_player,
+.home .powerpress_links,
+.blog .powerpress_player,
+.blog .powerpress_links {
+	@include hide();
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}

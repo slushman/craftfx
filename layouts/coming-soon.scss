@@ -1,0 +1,14 @@
+/*
+Theme Name: The Craft
+Layout: Coming-Soon
+*/
+
+.page-template-page_coming-soon-php .content-area {
+	width: 100%;
+	@include center();
+}
+
+.page-template-page_coming-soon-php .site-content {
+	padding: 0 1em;
+	@include center();
+}

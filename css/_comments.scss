@@ -1,0 +1,92 @@
+/* =Comments
+----------------------------------------------- */
+
+.comments-area {
+	@include column( 1 );
+}
+
+.comment-list {
+	margin: 0;
+
+	.comment {
+		margin: 2em 0 0;
+		padding: 1em;
+		border: 1px solid $medgray;
+
+		.comment-content {
+
+			a {
+				word-wrap: break-word;
+			}
+
+			p {
+				margin: $vspacing 0;
+			}
+		}
+
+		.reply {
+			width: 5em;
+			float: right;
+			
+			@include site_button();
+		}
+
+		.children {
+			margin: 0;
+		}
+	}
+
+	.even {
+		background-color: $lightgray;
+	}
+
+	.vcard {
+		@include aviano();
+
+		.fn {
+			margin: 0 0.5em;
+			float: left;
+			font-style: normal;
+		}
+
+		.says {
+			float: left;
+		}
+
+		.photo,
+		.avatar {
+			border: 2px solid $darkgray;
+			float: left;
+			width: 60px;
+		}
+
+	}
+
+	.comment-meta {
+		overflow: hidden;
+	}
+
+	.comment-metadata {
+		float: left;
+
+		a {
+			margin: 0 0.5em;
+			text-decoration: none;
+		}
+	}
+
+	.bypostauthor,
+	li ul.children li.bypostauthor {
+		background-color: $darkred;
+		color: $light;
+
+		a {
+			color: $light;
+		}
+	}	
+}
+
+.comment-respond {
+	margin: 2em 0 0;
+}
+

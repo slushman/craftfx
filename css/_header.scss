@@ -1,0 +1,108 @@
+/* =Header
+----------------------------------------------- */
+
+.site-header {
+	margin-bottom: 1.5em;
+
+	@include imagebg ( $small-header-bg, "", no-repeat, top, center, cover );
+	
+	@media only screen and (min-width: $responsive15) {
+		@include imagebg ( $header-bg, "", no-repeat, bottom, center, cover );
+	}
+
+	@media only screen and (min-width: $responsive5) {
+		@include imagebg ( $header-bg-wide, "", no-repeat, bottom, center, cover );
+	}
+
+	.site-branding {
+		max-width: 75em;
+		margin: 0 auto;
+		height: 180px;
+
+		@media only screen and (min-width: $responsive1) {
+			height: 287px;
+		}
+
+	} // End of .site-branding
+
+	.branding-wrap {
+		margin: 0 auto;
+		overflow: hidden;
+
+		@media only screen and (min-width: $responsive2) {
+			max-width: 52em;
+		}
+
+		@media only screen and (min-width: $responsive5) {
+			max-width: 75em;
+		}
+	} // End of .branding-wrap
+
+
+	.site-logo {
+		display: block;
+		height: 10em;
+		margin: 0.5em 1em;
+		
+		@include imagebg ( $logo-bg, "", no-repeat, center, center, contain );
+
+		@media only screen and (min-width: $responsive1) {
+			height: 231px;
+			width: 522px;
+			margin: 2em auto;
+		}
+
+		@media only screen and (min-width: $responsive3) {
+			display: inline-block;
+			margin: 2em 0.8em 0;
+		}
+
+		@media only screen and (min-width: $responsive5) {
+			margin: 2em 1.5em 1.5em 2em;
+		}
+	}
+
+	.host-photo {
+		display: none;
+
+		@media only screen and (min-width: $responsive5) {
+			display: inline-block;
+			height: 287px;
+			width: 355px;
+			margin: 0;
+
+			@include imagebg ( $headshot );
+		}
+	}
+
+	.site-description {
+		display: none;
+
+		@media only screen and (min-width: $responsive3) {
+			display: inline-block;
+			color: $light;
+			height: 18em;
+			margin: 0;
+			position: absolute;
+
+			@include imagebg ( $desc-bg, "", no-repeat, center, 30% );
+		}
+
+		.description-text {
+			display: none;
+
+			@include aviano;
+
+			@media only screen and (min-width: $responsive3) {
+				display: inline-block;
+				text-transform: uppercase;
+				text-align: justify;
+				margin: 13.5em 0 0;
+				max-width: 234px;
+			}
+
+		} // End of .description-text
+
+	} // End of .site-description
+
+} // End of .site-header

@@ -1,0 +1,325 @@
+/* =Content
+----------------------------------------------- */
+
+.site {
+	@include imagebg ( $site-bg, $site-retina-bg, repeat )
+}
+
+.site-main {
+	width: 100%;
+	max-width: 75em;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.content-area {
+	width: 100%;
+
+	@media only screen and (min-width: $responsive3) {
+		@include column( 1, 8, 1 );
+	}
+}
+
+.site-content {
+	position: relative;
+}
+
+.paging-navigation {
+	@include hide();
+}
+
+.post {
+	overflow: hidden;
+	margin-bottom: $vspacing;
+	vertical-align: top;
+	position: relative;
+
+	@include article($darkteal);
+
+	@include column( 1 );
+
+	.entry-content {
+		margin: 0;
+		color: $darkteal;	
+	}
+
+	p {
+		margin: 0 0 $lineheight;
+
+		@media only screen and (min-width: $responsive175) {
+			.read_more {
+				position: absolute;
+				bottom: 1.25em;
+				right: 1.25em;
+				color: $light;
+
+				@include site_button();
+			}
+		}
+	}
+}
+
+.entry-header {
+	overflow: hidden;
+	
+	.entry-title {
+		margin: 0;
+		line-height: 1em;
+
+		@include gothic();
+
+		.entry-title-link {
+			text-decoration: none;
+			color: $darkred;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+	} // End of .entry-title
+
+	.entry-meta {
+		margin-left: 0.25em;					
+	}
+
+	.post-time-link {
+		text-decoration: none;
+		color: $darkteal;
+		font-weight: bold;
+
+		@include gothic();
+	}
+
+} // End of .entry-header
+
+.hentry .entry-content {
+}
+
+.type-post .entry-content {
+	padding: 1.25em;
+}
+
+.entry-featured-image {
+	margin: 0 auto;
+	max-width: 100%;
+
+	@media only screen and (min-width: $responsive1) {
+		float: left;
+		margin: 0 2% 0 0;
+		max-width: 42.6%;
+	}
+
+	img {
+		width: 100%;
+	}
+
+}
+
+footer.entry-meta {
+	margin-bottom: $vspacing;
+
+	.edit-link {
+		@include site_button();
+	}
+
+} // End of .entry-meta
+
+.widget-area {
+	overflow: hidden;
+
+	@media only screen and (min-width: $responsive3) {
+		@include column( 1, 4, 1 );
+	}
+
+	.widget {
+		
+		@media only screen and (min-width: $responsive2) {
+			@include column( 2 );
+		}
+
+		@media only screen and (min-width: $responsive3) {
+			@include column( 1);
+		}
+	}
+
+} // End of .widget-area
+
+.blog .latest_post,
+.home .latest_post {
+	background-color: $darkteal;
+
+	@include article($darkgray);
+
+	@include shadow( 5px, 5px, 5px, 0, #858585 );
+
+	.post-time-link {
+		color: $lightgray !important;
+	}
+
+	.latest_new {
+		color: $light;
+		background-color: $darkred;
+		padding: 0.25em 1.5em;
+		border: 3px solid $darkgray;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		@include lobster();
+	}
+
+	.entry-content {
+		color: $lightgray;
+
+		.entry-title {
+
+			.entry-title-link {
+				color: $light;
+			}
+
+		}
+
+		.entry-featured-image {
+			position: relative;
+
+			@media only screen and (min-width: $responsive1) {
+				float: left;
+				margin: 0 2% 0 0;
+				max-width: 42.6%;
+			}
+
+		}
+
+	} // End of .entry-content
+
+} // End of .latest_post
+
+.sticky {
+	background-color: $darkgray;
+	max-width: 100% !important;
+	margin: 0 1.5% 3% !important;
+
+	@include article($darkgray);
+
+	@include shadow( 5px, 5px, 5px, 0, #858585 );
+
+	.post-time-link {
+		color: $darkred !important;
+	}
+
+	.entry-content {
+		color: $lightgray;
+
+		.entry-title {
+
+			.entry-title-link {
+				color: $light;
+			}
+
+		}
+
+		.entry-featured-image {
+			position: relative;
+
+			@media only screen and (min-width: $responsive1) {
+				float: left;
+				margin: 0 2% 0 0;
+			}
+
+		}
+
+		a {
+			color: $lightgray;
+		}
+
+	} // End of .entry-content
+
+}
+
+.upcoming-only {
+
+	.page-title {
+		text-transform: uppercase;
+		text-align: center;
+
+		@include aviano();
+	}
+
+	.upcoming_post {
+		text-transform: uppercase;
+	}
+
+	.upcoming_image {
+		text-align: center;
+	}
+
+	.upcoming_pic {
+		border: 3px solid $lightgray;
+	}
+
+	.upcoming_title {
+		float: left;
+		width: 48%;
+		text-align: right;
+	}
+
+	.upcoming_date {
+		float: right;
+		color: $darkred;
+		width: 48%;
+		text-align: left;
+	} 
+
+}
+
+/**
+ * Pages
+ */
+
+.page {
+
+	.entry-header {
+		margin-bottom: $vspacing;
+	}
+
+}
+
+/**
+ * About page
+ */
+
+.about_buttons {
+	font-size: $h2 - .4rem;
+
+	@include site_button();
+	@include column( 1 );
+
+	@media only screen and (min-width: $responsive15) {
+		@include column( 3 );
+	}
+}
+
+.contact_links {
+	color: $darkred;
+}
+
+.about_headings {
+	margin: 5% 0 2.5%;
+}
+
+.byline,
+.updated {
+	@include hide();
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: $vspacing 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 $vspacing;
+}

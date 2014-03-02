@@ -1,0 +1,52 @@
+// Home Page
+// --------------------------
+
+.home {
+
+	.site-main {
+		max-width: 75em;
+		margin: 0 auto;
+	}
+
+	.post {
+		position: relative;
+
+		@media only screen and (min-width: $responsive2) {
+			@include column( 2 );
+			min-height: 50rem;
+		}
+
+		@media only screen and (min-width: $responsive5) {
+			min-height: 47rem;
+		}
+	}
+
+	.entry-header,
+	.entry-content p {
+		margin: 0;
+	}
+
+	.entry-featured-image {
+
+		@media only screen and (min-width: $responsive2) {
+			margin: 0 auto;
+			float: none;
+			text-align: center;
+			max-width: 100%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.latest_post {
+
+		@media only screen and (min-width: $responsive2) {
+			@include column( 1 );
+			min-height: 0;
+		}
+
+	} // End of .latest_post
+
+}

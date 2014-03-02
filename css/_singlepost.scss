@@ -1,0 +1,43 @@
+.single-post {
+
+	.post {
+		border: none;
+		padding: 0;
+		margin-bottom: $vspacing * 2;
+
+		@include column( 1 );
+	}
+
+	.entry-content {
+		padding: 0;
+		margin-bottom: $vspacing;
+	}
+
+	.entry-header {
+		margin-bottom: $vspacing;
+
+		.entry-title {
+			float: left;
+			color: $darkred;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.entry-meta {
+			display: inline-block;
+		}
+
+		.entry-date {
+			@include gothic();
+		}
+
+	}
+
+	.form-allowed-tags {
+		font-size: 0.9em;
+
+		code {
+			font-size: 0.9em;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+/* =Author Box
+----------------------------------------------- */
+
+.author_box {
+
+	padding: 1em;
+	overflow: hidden;
+	border: 1px solid $medgray;
+	margin-bottom: 2em;
+
+	@include radius( 10px );
+
+	.author_avatar {
+		float: left;
+		margin-right: 1em;
+	}
+
+	.author_name {
+		clear: none;
+
+	}
+
+	.author_links {
+		padding: 1em 0 .5em;
+		float: left;
+		margin: 0;
+	}
+
+	.author_link {
+		list-style: none;
+		display: inherit;
+		float: left;
+	}
+
+	.author_icons {
+		padding: .5em;
+	}
+
+	.author_blog_link {
+		float: left;
+		padding: 1em 0;
+
+		@media only screen and (min-width: 600px) {
+			float: right;
+			padding: 1em;
+		}
+	}
+}

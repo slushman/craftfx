@@ -1,0 +1,58 @@
+/*!
+Theme Name: The Craft
+Theme URI: http://thecraftfx.com/
+Author: Slushman
+Author URI: http://slushman.com
+Description: The theme used for The Craft Podcast. Design by Aaron Grayum, coded by Slushman.
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: black, red, right-sidebar, fixed-width, post-formats, threaded-comments
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+The Craft is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+// reset styles should stay at the top
+@import "css/reset";
+
+// configure the style from settings
+@import "css/vars";
+
+// move mixins to their own partial
+@import "css/flexbox";
+@import "css/mixins";
+@import "fontawesome/font-awesome";
+
+// feel free to add any new files you want; if you add them this list they"ll be included
+@import "css/global";
+@import "css/typography";
+@import "css/layout";
+@import "css/menu";
+@import "css/header";
+@import "css/content";
+@import "css/footer";
+@import "css/forms";
+@import "css/postformats";
+@import "css/media";
+@import "css/navigation";
+@import "css/comments";
+@import "css/widgets";
+@import "css/asides";
+@import "css/infinitescroll";
+@import "css/slushman";
+@import "css/authorbox";
+@import "css/socials";
+@import "css/singlepost";
+@import "css/home";
+
+/* Import Layouts
+----------------------------------------------- */
+@import "layouts/coming-soon";

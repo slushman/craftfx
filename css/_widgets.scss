@@ -1,0 +1,140 @@
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 $vspacing;
+	border: 2px solid $darkgray;
+	padding: 1em;
+	background-color: $darkteal;
+
+	@include shadow( 5px, 5px, 5px, 0, #858585 );
+
+	/* Make sure select elements fit in widgets */
+	select {
+		max-width: 100%;
+	}
+	.widget-title {
+		text-align: center;
+		color: $light;
+		line-height: 1em;
+		margin: 0.3em;
+		font-size: 1.7em;
+
+		@include aviano;
+	}
+
+	/* Search widget */
+	.widget_search {
+
+		.search-submit {
+			@include hide();
+		}
+
+		.search-field {
+			max-width: 100%;
+		}
+	}
+}
+
+.slushman_upcoming_posts_widget {
+
+	.upcoming_post {
+		overflow: hidden;
+		font-weight: bold;
+		font-size: 1.6em;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: .5em;
+
+		@include gothic();
+
+		.upcoming_image {
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.upcoming_pic {
+			border: 2px solid $lightgray;
+		}
+
+		.upcoming_words {
+			text-align: center;
+		}
+
+		.upcoming_title {
+			color: $light;
+		}
+
+		.upcoming_date {
+			color: $lightgray;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.slushman_featured_posts_widget {
+	background-color: $darkgray;
+	overflow: hidden;
+
+	.featured_posts {
+		@include column( 1 );
+	}
+
+	.widget-title {
+		font-size: 1.5em;
+		margin-bottom: 0.6em;
+	}
+
+	.featured_post {
+		margin-bottom: 1%;
+
+		@include column( 2 );
+
+		.featured_image {
+		}
+
+		.featured_pic {
+			border: 2px solid $lightgray;
+			width: 100%;
+		}
+	}
+}
+
+.widget_mailchimpsf_widget,
+.widget_mc4wp_lite_widget,
+.widget_mc4wp_widget {
+	background-color: $darkred;
+	text-align: center;
+
+	.mc_var_label,
+	#mc-indicates-required {
+		@include hide();
+	}
+
+	#mc_signup_submit {
+		margin-top: 0;
+	}
+
+	.mc4wp_field {
+		margin: 0 auto 1.5em;
+	}
+
+	.mc4wp_fname {
+		max-width:49%;
+		float: left;
+	}
+
+	.mc4wp_lname {
+		max-width: 49%;
+		float: right;
+	}
+
+	.mc4wp_button {
+		width: 80%;
+	}
+}

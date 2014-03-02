@@ -1,0 +1,201 @@
+// Flexbox Container Mixins
+// --------------------------
+
+/**
+ * Defines the flex container
+ *
+ * Like display: block
+ */
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/**
+ * Defines the flex container
+ *
+ * Like display: inline-block
+ */
+@mixin inlineflexbox() {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+/**
+ * Defines direction items are placed in the container
+ * 
+ * row (default): left to right in ltr; right to left in rtl
+ * row-reverse: right to left in ltr; left to right in rtl
+ * column: same as row but top to bottom
+ * column-reverse: same as row-reverse but top to bottom
+ */
+@mixin flexdirection( $values ) {
+  -moz-flex-direction: $values;
+  -webkit-flex-direction: $values;
+  -ms-flex-direction: $values;
+  flex-direction: $values;
+}
+
+/**
+ * Defines whether the flex container is single-line or multi-line, 
+ * and the direction of the cross-axis, which determines the direction new lines are stacked in.
+ * 
+ * nowrap (default): single-line / left to right in ltr; right to left in rtl
+ * wrap: multi-line / left to right in ltr; right to left in rtl
+ * wrap-reverse: multi-line / right to left in ltr; left to right in rtl
+ */
+@mixin flexwrap( $values ) {
+  -moz-flex-wrap: $values;
+  -webkit-flex-wrap: $values;
+  -ms-flex-wrap: $values;
+  flex-wrap: $values;
+}
+
+/**
+ * Shorthand for flex-direction and flex-wrap
+ *
+ * Default is: row nowrap
+ *
+ * flex-direction && flex-wrap values
+ */
+@mixin flexflow( $values ) {
+  -moz-flex-flow: $values;
+  -webkit-flex-flow: $values;
+  -ms-flex-flow: $values;
+  flex-flow: $values;
+}
+
+/**
+ * Defines alignment along the main axis and how free space is distributed
+ *
+ * flex-start (default): items are packed toward the start line
+ * flex-end: items are packed toward to end line
+ * center: items are centered along the line
+ * space-between: items are evenly distributed; first item on the start line, last item on the end line
+ * space-around: items are evenly distributed with equal space around them
+ */
+@mixin justify( $values ) {
+  -webkit-justify-content: $values;
+  -moz-justify-content: $values;
+  -ms-justify-content: $values;
+  justify-content: $values;
+}
+
+/**
+ * Alignment on the cross-axis
+ *
+ * flex-start: cross-start margin edge of the items is placed on the cross-start line
+ * flex-end: cross-end margin edge of the items is placed on the cross-end line
+ * center: items are centered in the cross-axis
+ * baseline: items are aligned such as their baselines align
+ * stretch (default): stretch to fill the container (still respect min-width/max-width)
+ */
+@mixin alignitems( $values ) {
+  -webkit-align-items: $values;
+  -moz-align-items: $values;
+  -ms-align-items: $values;
+  align-items: $values;
+}
+
+
+
+// Flexbox Item Mixins
+// --------------------------
+
+/**
+ * Shorthand for flex-grow, flex-shrink and flex-basis
+ *
+ * Default is: 0 1 auto
+ */
+@mixin flex( $values ) {
+  -webkit-box-flex: $values;
+  -webkit-flex:  $values;
+  -moz-box-flex:  $values;
+  -moz-flex: $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+/**
+ * Defines the ability for a flex item to grow if necessary. Accepts a 
+ * unitless value that serves as a proportion. Dictates what amount of 
+ * the available space inside the flex container the item should take up.
+ *
+ * If all items have flex-grow set to 1, every child will set to an equal 
+ * size inside the container. If you were to give one of the children a 
+ * value of 2, that child would take up twice as much space as the others.
+ *
+ * Default is: 0
+ */
+@mixin flexgrow( $values ) {
+  -webkit-box-flex-grow: $values;
+  -webkit-flex-grow:  $values;
+  -moz-box-flex-grow:  $values;
+  -moz-flex-grow: $values;
+  -ms-flex-grow:  $values;
+  flex-grow:  $values;
+}
+
+/**
+ * This defines the ability for a flex item to shrink if necessary.
+ *
+ * Default is: 1
+ */
+@mixin flexshrink( $values ) {
+  -webkit-box-flex-shrink: $values;
+  -webkit-flex-shrink:  $values;
+  -moz-box-flex-shrink:  $values;
+  -moz-flex-shrink: $values;
+  -ms-flex-shrink:  $values;
+  flex-shrink:  $values;
+}
+
+/**
+ * This defines the default size of an element before the remaining space is distributed.
+ *
+ * Default is: auto
+ */
+@mixin flexbasis( $values ) {
+  -webkit-box-flex-basis: $values;
+  -webkit-flex-basis:  $values;
+  -moz-box-flex-basis:  $values;
+  -moz-flex-basis: $values;
+  -ms-flex-basis:  $values;
+  flex-basis:  $values;
+}
+
+/**
+ * This allows the default alignment or the one specified by align-items to be 
+ * overridden for individual flex items.
+ *
+ * flex-start: cross-start margin edge of the items is placed on the cross-start line
+ * flex-end: cross-end margin edge of the items is placed on the cross-end line
+ * center: items are centered in the cross-axis
+ * baseline: items are aligned such as their baselines align
+ * stretch (default): stretch to fill the container (still respect min-width/max-width)
+ */
+@mixin alignself( $values ) {
+  -webkit-align-self: $values;
+  -moz-align-self: $values;
+  -ms-align-self: $values;
+  align-self: $values;
+}
+
+/**
+ * Controls the order in which they appear in their container.
+ *
+ * Default order is the source code order.
+ */
+@mixin order( $value ) {
+  -webkit-box-ordinal-group: $value;  
+  -moz-box-ordinal-group: $value;     
+  -ms-flex-order: $value;     
+  -webkit-order: $value;  
+  order: $value;
+}
