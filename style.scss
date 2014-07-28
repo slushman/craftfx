@@ -29,7 +29,6 @@ and Blueprint http://www.blueprintcss.org/
 // move mixins to their own partial
 @import "css/flexbox";
 @import "css/mixins";
-@import "fontawesome/font-awesome";
 
 // feel free to add any new files you want; if you add them this list they"ll be included
 @import "css/global";
@@ -47,7 +46,6 @@ and Blueprint http://www.blueprintcss.org/
 @import "css/widgets";
 @import "css/asides";
 @import "css/infinitescroll";
-@import "css/slushman";
 @import "css/authorbox";
 @import "css/socials";
 @import "css/singlepost";

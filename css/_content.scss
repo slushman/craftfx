@@ -163,6 +163,7 @@ footer.entry-meta {
 		position: absolute;
 		top: 0;
 		right: 0;
+		font-size: 1.5rem;
 
 		@include lobster();
 	}
@@ -286,6 +287,10 @@ footer.entry-meta {
 /**
  * About page
  */
+
+.about_links {
+	overflow: hidden;
+}
 
 .about_buttons {
 	font-size: $h2 - .4rem;

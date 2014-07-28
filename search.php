@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<div id="content" class="site-content search-file" role="main">
 
 		<?php if ( have_posts() ) : ?>
 

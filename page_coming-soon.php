@@ -26,7 +26,7 @@
 		<div id="main" class="site-main">
 
 			<div id="primary" class="content-area">
-				<div id="content" class="site-content" role="main">
+				<div id="content" class="site-content coming-soon" role="main">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 

@@ -250,6 +250,23 @@
     }
 }
 
+@mixin hidetext() {
+	text-indent	: 100%;
+	overflow	: hidden;
+	white-space	: nowrap;
+}
+
+@mixin svgicon( $icon ) {
+	background-image	: url(images/#{$icon}.svg);
+	background-size		: 30px 30px;
+	width				: 30px;
+	height				: 30px;
+	display				: block;
+	background-repeat	: no-repeat;
+	text-decoration		: none;
+	@include hidetext();
+}
+
 @mixin site_button() {
     text-align: center;
     padding: 0.5em 1em;

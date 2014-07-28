@@ -10,14 +10,16 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main"><?php
+		<div id="content" class="site-content content-home" role="main"><?php
+
+		echo '<p>Bite me!</p>';
 
 			$query['category_name'] = 'Podcast';
 			$query['posts_per_page'] = 5;
 
-			query_posts( $query );
+			$posts = new WP_Query( $query );
 
-			if ( have_posts() ) :
+			if ( $posts->post_count > 0 ) :
 
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();

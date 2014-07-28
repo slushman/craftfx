@@ -40,25 +40,21 @@
 
 
 	.site-logo {
-		display: block;
-		height: 10em;
-		margin: 0.5em 1em;
+		width: 360px;
+		margin: 0.5em auto;
 		
-		@include imagebg ( $logo-bg, "", no-repeat, center, center, contain );
-
 		@media only screen and (min-width: $responsive1) {
-			height: 231px;
 			width: 522px;
 			margin: 2em auto;
 		}
 
 		@media only screen and (min-width: $responsive3) {
-			display: inline-block;
-			margin: 2em 0.8em 0;
+			float: left;
+			margin: 2em 1em;
 		}
 
 		@media only screen and (min-width: $responsive5) {
-			margin: 2em 1.5em 1.5em 2em;
+			margin: 2em 1.5em;
 		}
 	}
 
@@ -66,7 +62,8 @@
 		display: none;
 
 		@media only screen and (min-width: $responsive5) {
-			display: inline-block;
+			float: left;
+			display: inherit;
 			height: 287px;
 			width: 355px;
 			margin: 0;
@@ -79,29 +76,12 @@
 		display: none;
 
 		@media only screen and (min-width: $responsive3) {
-			display: inline-block;
+			float: left;
+			display: inherit;
 			color: $light;
-			height: 18em;
-			margin: 0;
-			position: absolute;
-
-			@include imagebg ( $desc-bg, "", no-repeat, center, 30% );
+			width: 16em;
+			margin-top: 2em;
 		}
-
-		.description-text {
-			display: none;
-
-			@include aviano;
-
-			@media only screen and (min-width: $responsive3) {
-				display: inline-block;
-				text-transform: uppercase;
-				text-align: justify;
-				margin: 13.5em 0 0;
-				max-width: 234px;
-			}
-
-		} // End of .description-text
 
 	} // End of .site-description
 

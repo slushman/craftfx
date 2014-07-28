@@ -36,31 +36,15 @@
 	}
 }
 
-.slushman_upcoming_posts_widget {
+.slushman_upcoming_posts {
 
 	.upcoming_post {
-		overflow: hidden;
-		font-weight: bold;
-		font-size: 1.6em;
 		text-transform: uppercase;
-		text-align: center;
-		margin-bottom: .5em;
 
 		@include gothic();
 
-		.upcoming_image {
-
-			img {
-				width: 100%;
-			}
-		}
-
 		.upcoming_pic {
 			border: 2px solid $lightgray;
-		}
-
-		.upcoming_words {
-			text-align: center;
 		}
 
 		.upcoming_title {
@@ -70,37 +54,17 @@
 		.upcoming_date {
 			color: $lightgray;
 		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 }
 
-.slushman_featured_posts_widget {
+.slushman_featured_posts {
 	background-color: $darkgray;
-	overflow: hidden;
-
-	.featured_posts {
-		@include column( 1 );
-	}
-
-	.widget-title {
-		font-size: 1.5em;
-		margin-bottom: 0.6em;
-	}
 
 	.featured_post {
-		margin-bottom: 1%;
-
 		@include column( 2 );
-
-		.featured_image {
-		}
 
 		.featured_pic {
 			border: 2px solid $lightgray;
-			width: 100%;
 		}
 	}
 }
